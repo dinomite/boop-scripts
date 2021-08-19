@@ -10,7 +10,9 @@
 **/
 function main(state) {
     var newText = state.fullText
-        .replace(/!/g, "\n	")
+        .replace(/!/g, "	")
+        .replace(/	+/g, "	")
+        .replace(/	/g, "\n	")
 
     state.fullText = newText;
 }
